@@ -22,9 +22,6 @@ public class HelloController {
     public void clear(){
         isequal.setText("");
     }
-    public void delete(){
-
-    }
 
     public void OnMouseClick(MouseEvent mouseEvent) {
 
@@ -53,8 +50,6 @@ public class HelloController {
                 break;
             case "C":
                 clear();
-                break;
-            case "DELETE":
 
 
 
