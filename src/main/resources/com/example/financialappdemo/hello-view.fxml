@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.financialappdemo.HelloController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.financialappdemo.Controller.HelloController">
    <children>
       <Pane layoutY="25.0" prefHeight="377.0" prefWidth="281.0">
          <children>
@@ -103,10 +103,11 @@
                                     <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" mouseTransparent="true" pickOnBounds="false" />
                                     <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#OnMouseClick" text="C" GridPane.columnIndex="1" />
                                     <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#OnMouseClick" text="Delete" GridPane.columnIndex="2" />
-                                    <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="/" GridPane.columnIndex="3" />
+                                    <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#OnMouseClick" text="/" GridPane.columnIndex="3" />
                                     <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" mouseTransparent="true" pickOnBounds="false" GridPane.rowIndex="4" />
                                  </children>
                               </GridPane>
+                              <Label fx:id="isequal" alignment="BOTTOM_RIGHT" layoutX="11.0" layoutY="25.0" prefHeight="48.0" prefWidth="272.0" text="=" />
                            </children>
                         </AnchorPane>
                   </content>
