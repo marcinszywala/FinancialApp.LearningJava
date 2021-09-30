@@ -23,6 +23,13 @@ public class HelloController {
         isequal.setText("");
     }
 
+    public void delete(){
+        StringBuffer sb = new StringBuffer((CharSequence) isequal.getText());
+        sb.deleteCharAt(sb.length()-1);
+        isequal.setText(String.valueOf(sb));
+
+    }
+
     public void OnMouseClick(MouseEvent mouseEvent) {
 
         Button button = (Button) mouseEvent.getSource();
@@ -50,6 +57,8 @@ public class HelloController {
                 break;
             case "C":
                 clear();
+            case "Delete":
+                delete();
 
 
 
