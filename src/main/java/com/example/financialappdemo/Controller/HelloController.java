@@ -8,25 +8,34 @@ import javafx.scene.input.MouseEvent;
 
 public class HelloController {
 
+
+    public static Label getIsEqual() {
+        return isEqual;
+    }
+
+    public void setIsEqual(Label isequal) {
+        this.isEqual = isequal;
+    }
+
     @FXML
-    private Label isequal = new Label();
+    private Label isEqual = new Label();
 
     public void insertNumber(String number){
-        isequal.setText(isequal.getText() + number);
+        isEqual.setText(isEqual.getText() + number);
     }
 
     public void insertOperator(String operator){
-        isequal.setText(isequal.getText() + "" + operator + "");
+        isEqual.setText(isEqual.getText() + "" + operator + "");
     }
 
     public void clear(){
-        isequal.setText("");
+        isEqual.setText("");
     }
 
     public void delete(){
-        StringBuffer sb = new StringBuffer((CharSequence) isequal.getText());
+        StringBuffer sb = new StringBuffer((CharSequence) isEqual.getText());
         sb.deleteCharAt(sb.length()-1);
-        isequal.setText(String.valueOf(sb));
+        isEqual.setText(String.valueOf(sb));
 
     }
 
@@ -51,6 +60,7 @@ public class HelloController {
                 break;
             case "+":
             case "-":
+                isEqual.setText("");
             case "*":
             case "/":
                 insertOperator(buttonText);
