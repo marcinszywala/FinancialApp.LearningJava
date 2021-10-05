@@ -13,12 +13,12 @@ public class HelloController {
         return isEqual;
     }
 
-    public void setIsEqual(Label isequal) {
-        this.isEqual = isequal;
+    public static void setIsEqual(Label isEqual) {
+        HelloController.isEqual = isEqual;
     }
 
     @FXML
-    private Label isEqual = new Label();
+    private static Label isEqual = new Label();
 
     public void insertNumber(String number){
         isEqual.setText(isEqual.getText() + number);
@@ -33,7 +33,7 @@ public class HelloController {
     }
 
     public void delete(){
-        StringBuffer sb = new StringBuffer((CharSequence) isEqual.getText());
+        StringBuilder sb = new StringBuilder((CharSequence) isEqual.getText());
         sb.deleteCharAt(sb.length()-1);
         isEqual.setText(String.valueOf(sb));
 
@@ -60,7 +60,6 @@ public class HelloController {
                 break;
             case "+":
             case "-":
-                isEqual.setText("");
             case "*":
             case "/":
                 insertOperator(buttonText);

@@ -16,9 +16,9 @@ public class divide {
 
 
         for (int i = 1; i < parts.length; i++) {
-            result -= Integer.parseInt(parts[i]);
+            result /= Integer.parseInt(parts[i]);
 
-            System.out.println(result);
+            String.valueOf(HelloController.setIsEqual(result);
         }
 
     }

@@ -10,15 +10,15 @@ public class add {
         String[] parts = calculation.split("\\+");
 
         int result = 0;
-        if(parts[0].equals(" ")) {
+        if (parts[0].equals(" ")) {
             result = 0;
         }
 
 
         for (int i = 1; i < parts.length; i++) {
-            result -= Integer.parseInt(parts[i]);
-        }
+            result += Integer.parseInt(parts[i]);
 
-        String.valueOf(HelloController.setIsEqual(result));
+            String.valueOf(HelloController.setIsEqual(result));
+        }
     }
 }
