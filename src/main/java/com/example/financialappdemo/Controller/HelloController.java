@@ -1,6 +1,7 @@
 package com.example.financialappdemo.Controller;
 
 
+import com.example.financialappdemo.equastions.add;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -9,33 +10,41 @@ import javafx.scene.input.MouseEvent;
 public class HelloController {
 
 
-    public static Label getIsEqual() {
-        return isEqual;
+    public Label getExpression() {
+        return expression;
     }
 
-    public static void setIsEqual(Label isEqual) {
-        HelloController.isEqual = isEqual;
+    public void setExpression(Label newExpression) {
+        this.expression.setText(String.valueOf(newExpression));
     }
 
     @FXML
-    private static Label isEqual = new Label();
+    private  Label expression;
+
+    @FXML
+    private Label result;
+
+    public void setResult(String newResult) {
+        this.result.setText(String.valueOf(newResult));
+    }
 
     public void insertNumber(String number){
-        isEqual.setText(isEqual.getText() + number);
+        expression.setText(expression.getText() + number);
     }
 
     public void insertOperator(String operator){
-        isEqual.setText(isEqual.getText() + "" + operator + "");
+        expression.setText(expression.getText() + "" + operator + "");
     }
 
     public void clear(){
-        isEqual.setText("");
+        expression.setText("");
+        result.setText("");
     }
 
     public void delete(){
-        StringBuilder sb = new StringBuilder((CharSequence) isEqual.getText());
+        StringBuilder sb = new StringBuilder((CharSequence) expression.getText());
         sb.deleteCharAt(sb.length()-1);
-        isEqual.setText(String.valueOf(sb));
+        expression.setText(String.valueOf(sb));
 
     }
 
@@ -45,33 +54,15 @@ public class HelloController {
         String buttonText = button.getText();
 
 
-        switch(buttonText){
-            case "1":
-            case "2":
-            case "3":
-            case "4":
-            case "5":
-            case "6":
-            case "7":
-            case "8":
-            case "9":
-            case "0":
-                insertNumber(buttonText);
-                break;
-            case "+":
-            case "-":
-            case "*":
-            case "/":
-                insertOperator(buttonText);
-                break;
-            case "C":
-                clear();
-            case "Delete":
-                delete();
-
-
-
-
+        switch (buttonText) {
+            case "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" -> insertNumber(buttonText);
+            case "+", "-", "*", "/" -> insertOperator(buttonText);
+            case "C" -> clear();
+            case "Delete" -> delete();
+            case "=" -> {
+                double result = add.add(this.getExpression().getText());
+                setResult(String.valueOf(result));
+            }
         }
     }
 }

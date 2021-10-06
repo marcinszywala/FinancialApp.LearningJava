@@ -6,7 +6,7 @@ public class multiply {
 
     private void multiply() {
 
-        String calculation = String.valueOf(HelloController.getIsEqual());
+      /*  String calculation = String.valueOf(HelloController.getIsEqual());
         String[] parts = calculation.split("\\*");
 
         int result = 0;
@@ -18,8 +18,8 @@ public class multiply {
         for (int i = 1; i < parts.length; i++) {
             result *= Integer.parseInt(parts[i]);
 
-            String.valueOf(HelloController.setIsEqual(result));
+          //  String.valueOf(HelloController.setIsEqual(result));
         }
-
+*/
     }
 }
