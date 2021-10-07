@@ -1,7 +1,7 @@
 package com.example.financialappdemo.Controller;
 
 
-import com.example.financialappdemo.equastions.add;
+import com.example.financialappdemo.equastions.Results;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -60,9 +60,15 @@ public class HelloController {
             case "C" -> clear();
             case "Delete" -> delete();
             case "=" -> {
-                double result = add.add(this.getExpression().getText());
+                double result = Results.minus(this.getExpression().getText());
                 setResult(String.valueOf(result));
             }
         }
     }
 }
+
+/*TODO
+- ŻEBY DZIAŁAŁO
+- pierwszy znak przed pierwszą w kalkulatorze to może być tylko i wyłącznie minus
+- zablokować możliwość wklepania kilku znaków obok siebie
+ */
