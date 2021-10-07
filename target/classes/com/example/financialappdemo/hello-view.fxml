@@ -108,11 +108,9 @@
                                 <Font size="18.0" />
                             </font>
                         </Button>
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" mouseTransparent="true" pickOnBounds="false" />
                         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#OnMouseClick" text="C" GridPane.columnIndex="1" />
                         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#OnMouseClick" text="Delete" GridPane.columnIndex="2" />
                         <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#OnMouseClick" text="/" GridPane.columnIndex="3" />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" mouseTransparent="true" pickOnBounds="false" GridPane.rowIndex="4" />
                     </GridPane>
                     <Label fx:id="expression" alignment="BOTTOM_RIGHT" layoutX="7.0" layoutY="24.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="268.0" wrapText="true">
                         <font>
