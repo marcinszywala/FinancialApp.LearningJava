@@ -9,7 +9,7 @@ import javafx.scene.input.MouseEvent;
 
 public class HelloController {
 
-
+    Results results = new Results();
     public Label getExpression() {
         return expression;
     }
@@ -32,10 +32,23 @@ public class HelloController {
         expression.setText(expression.getText() + number);
     }
 
-    public void insertOperator(String operator){
-        expression.setText(expression.getText() + "" + operator + "");
+    public void insertOperator(String operator) {
+        if (!isLastCharOperator(expression.getText())) {
+            expression.setText(expression.getText() + "" + operator + "");
+        }
     }
+    private boolean isLastCharOperator(String expression){
+        if(expression.length() == 0){
+            return false;
+        }
+        char last = expression.charAt(expression.length() -1);
+        if (last == '+' || last == '-' || last == '*' || last == '/'){
+            return true;
 
+        }
+
+        return false;
+    }
     public void clear(){
         expression.setText("");
         result.setText("");
@@ -59,16 +72,24 @@ public class HelloController {
             case "+", "-", "*", "/" -> insertOperator(buttonText);
             case "C" -> clear();
             case "Delete" -> delete();
-            case "=" -> {
-                double result = Results.minus(this.getExpression().getText());
-                setResult(String.valueOf(result));
-            }
+            case "=" -> getResults();
+
+
         }
+    }
+
+    private void getResults() {
+
+        double result = results.minus(this.getExpression().getText());
+        setResult(String.valueOf(result));
+
     }
 }
 
 /*TODO
 - ŻEBY DZIAŁAŁO
 - pierwszy znak przed pierwszą w kalkulatorze to może być tylko i wyłącznie minus
-- zablokować możliwość wklepania kilku znaków obok siebie
+- zablokować możliwość wklepania kilku znaków obok siebie                                   DONE
+
+
  */

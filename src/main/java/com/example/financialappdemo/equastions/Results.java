@@ -3,9 +3,8 @@ package com.example.financialappdemo.equastions;
 public class Results {
 
 
-    public static double minus(String expression) {
+    public double minus(String expression) {
 
-        //  String calculation = String.valueOf(HelloController.getIsEqual());
         boolean check = false;
         if(expression.startsWith("-")) check = true;
         String[] parts = expression.split("\\-");
@@ -30,7 +29,7 @@ public class Results {
     }
 
 
-    public static double add(String expression) {
+    public double add(String expression) {
 
         //   String calculation = String.valueOf(new HelloController().getExpression());
         String[] parts = expression.split("\\+");
@@ -47,7 +46,7 @@ public class Results {
         return result;
     }
 
-    public static double divide(String expression) {
+    public double divide(String expression) {
 
         //  String calculation = String.valueOf(HelloController.getIsEqual());
         String[] parts = expression.split("\\/");
@@ -65,7 +64,7 @@ public class Results {
         return result;
     }
 
-    public static double multiply(String expression) {
+    public double multiply(String expression) {
 
         //  String calculation = String.valueOf(HelloController.getIsEqual());
         String[] parts = expression.split("\\*");
