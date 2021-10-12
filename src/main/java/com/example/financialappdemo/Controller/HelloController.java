@@ -26,23 +26,22 @@ public class HelloController {
     }
 
     public void insertOperator(String operator) {
-      //  if (!isFirstCharIsEmpty(expression.getText())){
-      //      expression.setText("");
-      //  }
-        if (!isLastCharOperator(expression.getText())) {
+      if (isFirstCharIsMinus(expression.getText(), operator)){
+          expression.setText(expression.getText() + "" + operator + "");
+      }
+      else if (!isLastCharOperator(expression.getText())) {
             expression.setText(expression.getText() + "" + operator + "");
         }
+
     }
 
-   // public boolean isFirstCharIsEmpty(String expression) {
-   //     if (expression.startsWith("+") || expression.startsWith("/") || expression.startsWith("*")) {
-   //         return true;
-    //    }
-    //    return false;
-   // }
+    public boolean isFirstCharIsMinus(String expression, String operator) {
+        return expression.length() == 0 && operator.equals("-");
+    }
+
     private boolean isLastCharOperator(String expression) {
         if (expression.length() == 0) {
-            return false;
+            return true;
         }
         char last = expression.charAt(expression.length() - 1);
         return last == '+' || last == '-' || last == '*' || last == '/';
