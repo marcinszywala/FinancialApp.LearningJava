@@ -1,14 +1,13 @@
 package com.example.financialappdemo.equations;
 
 import java.util.List;
+
 public class Results {
 
     public double mathOperations(String expression) {
 
         List<String> operators = List.of(expression.split("[0-9]+"));
         List<String> operands = List.of(expression.split("[+\\-*/]"));
-        //operators.remove("");
-
         double results = 0.0;
         if (isParsable(operands.get(0))){
             results = Integer.parseInt(operands.get(0));
@@ -37,5 +36,4 @@ public class Results {
             return false;
         }
     }
-
 }

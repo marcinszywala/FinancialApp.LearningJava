@@ -26,17 +26,10 @@ public class HelloController {
     }
 
     public void insertOperator(String operator) {
-      if (isFirstCharIsMinus(expression.getText(), operator)){
-          expression.setText(expression.getText() + "" + operator + "");
-      }
-      else if (!isLastCharOperator(expression.getText())) {
+      if (!isLastCharOperator(expression.getText())) {
             expression.setText(expression.getText() + "" + operator + "");
         }
 
-    }
-
-    public boolean isFirstCharIsMinus(String expression, String operator) {
-        return expression.length() == 0 && operator.equals("-");
     }
 
     private boolean isLastCharOperator(String expression) {
@@ -76,13 +69,4 @@ public class HelloController {
             }
         }
     }
-
 }
-
-/*TODO
-- ŻEBY DZIAŁAŁO                                                                         PRAWIE DZIALA !!
-- pierwszy znak przed pierwszą w kalkulatorze to może być tylko i wyłącznie minus   DO ZROBIENIA
-- zablokować możliwość wklepania kilku znaków obok siebie                                   DONE
-
-
- */
