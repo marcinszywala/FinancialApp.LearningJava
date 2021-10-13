@@ -98,11 +98,6 @@
                                 <Font size="18.0" />
                             </font>
                         </Button>
-                        <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#OnMouseClick" text="ANS" GridPane.columnIndex="2" GridPane.rowIndex="4">
-                            <font>
-                                <Font size="18.0" />
-                            </font>
-                        </Button>
                         <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#OnMouseClick" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4">
                             <font>
                                 <Font size="18.0" />
