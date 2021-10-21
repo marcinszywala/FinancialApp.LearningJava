@@ -12,4 +12,6 @@ module com.example.financialappdemo {
 
     opens com.example.financialappdemo to javafx.fxml;
     exports com.example.financialappdemo;
+    exports com.example.financialappdemo.Controller;
+    opens com.example.financialappdemo.Controller to javafx.fxml;
 }
