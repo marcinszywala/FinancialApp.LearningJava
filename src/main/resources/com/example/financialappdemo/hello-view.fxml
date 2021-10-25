@@ -123,14 +123,18 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="352.0" prefWidth="281.0">
                     <SplitMenuButton layoutX="22.0" layoutY="71.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="From">
                         <items>
-                            <MenuItem mnemonicParsing="false" text="Action 1" />
-                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                            <MenuItem mnemonicParsing="false" onAction="#PLN" text="PLN" />
+                            <MenuItem mnemonicParsing="false" onAction="#GBP" text="GBP" />
+                     <MenuItem mnemonicParsing="false" onAction="#EUR" text="EUR" />
+                     <MenuItem mnemonicParsing="false" onAction="#USD" text="USD" />
                         </items>
                     </SplitMenuButton>
                     <SplitMenuButton layoutX="149.0" layoutY="71.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="To">
                         <items>
-                            <MenuItem mnemonicParsing="false" text="Action 1" />
-                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                            <MenuItem mnemonicParsing="false" onAction="#PLN2" text="PLN" />
+                            <MenuItem mnemonicParsing="false" onAction="#GBP2" text="GBP" />
+                     <MenuItem mnemonicParsing="false" onAction="#EUR2" text="EUR" />
+                     <MenuItem mnemonicParsing="false" onAction="#USD2" text="USD" />
                         </items>
                     </SplitMenuButton>
                     <Label alignment="CENTER" layoutX="15.0" layoutY="14.0" prefHeight="25.0" prefWidth="245.0" text="Pick currency and calculate">
@@ -138,9 +142,12 @@
                             <Font name="Arial Black" size="14.0" />
                         </font>
                     </Label>
-                    <TextField alignment="CENTER" layoutX="22.0" layoutY="114.0" prefHeight="25.0" prefWidth="103.0" />
-                    <TextField alignment="CENTER" layoutX="149.0" layoutY="114.0" prefHeight="25.0" prefWidth="105.0" />
-                    <Label layoutX="133.0" layoutY="118.0" text="=" />
+                    <TextField fx:id="calcFrom" alignment="CENTER" layoutX="22.0" layoutY="139.0" prefHeight="25.0" prefWidth="103.0" />
+                    <TextField fx:id="calcTo" alignment="CENTER" editable="false" layoutX="149.0" layoutY="139.0" prefHeight="25.0" prefWidth="105.0" />
+                    <Label layoutX="133.0" layoutY="143.0" text="=" />
+               <Label fx:id="pickedTo" layoutX="182.0" layoutY="102.0" prefHeight="25.0" prefWidth="39.0" />
+               <Label fx:id="pickedFrom" layoutX="54.0" layoutY="102.0" prefHeight="25.0" prefWidth="39.0" />
+               <Button layoutX="80.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#OnMouse" prefHeight="56.0" prefWidth="116.0" text="Calculate" />
                 </AnchorPane>
             </Tab>
         </TabPane>
